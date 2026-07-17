@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kifusuru — Kenali Risikomu, Siapkan Perlindunganmu!!</title>
+<link rel="manifest" href="./manifest.json">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header class="hud">
+  <div class="hud-inner">
+    <div class="brand" aria-label="Kifusuru">
+      <img class="brand-icon" src="./icon.svg" alt="Ikon Kifusuru">
+      <img class="brand-wordmark" src="./com_name.svg" alt="Kifusuru">
+    </div>
+    <div class="hud-center-tag">Kenali Risikomu, Siapkan Perlindunganmu!!</div>
+    <div class="hud-score">
+      <div class="hud-text" style="align-items:flex-end;">
+        <span class="hud-number"><span id="hudNumber">0</span>/100</span>
+        <span class="hud-label" id="hudLabel">Rentan</span>
+      </div>
+      <div class="hud-ring-wrap">
+        <svg viewBox="0 0 40 40">
+          <circle class="hud-ring-bg" cx="20" cy="20" r="16"></circle>
+          <circle class="hud-ring-fg" id="hudRing" cx="20" cy="20" r="16" stroke-dasharray="100.53" stroke-dashoffset="100.53"></circle>
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="section hero" id="hero" style="border-bottom:1px solid rgba(241,236,220,0.06);">
+    <div class="hero-copy">
+      <p class="eyebrow">Jaring pengaman yang benar-benar bisa kamu bangun</p>
+      <h1>Anyam jaringmu,<br><em>sebelum</em> kamu jatuh.</h1>
+      <p class="lede">Kifusuru mengubah nasihat “siapkan dana darurat 3 bulan gaji” — yang sering terdengar ideal namun sulit diterapkan saat penghasilan terbatas — menjadi sesuatu yang lebih realistis: sebuah jaring pengaman yang dibangun dari beberapa pertahanan kecil, satu per satu.</p>
+      <div class="hero-actions">
+        <a href="#know" class="btn btn-primary">Mulai menganyam ↓</a>
+        <a href="#weave" class="btn btn-ghost">Lihat strateginya</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="stat-card">
+        <span class="stat-number mono">70%</span>
+        <span class="stat-text">warga Indonesia hidup tanpa dana darurat dan hanya mengandalkan penghasilan bulanan.</span>
+        <span class="stat-source">OJK & survei GoodStats, dilaporkan 2025</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- KNOW YOUR NUMBER -->
+  <section class="section" id="know">
+    <p class="eyebrow">Langkah 1</p>
+    <div class="section-intro">
+      <h2>Berapa hari kamu bisa bertahan dari guncangan?</h2>
+      <p>Ini bukan audit keuangan — cuma tiga angka kasar untuk menemukan titik awalmu. Tidak ada yang disimpan atau dikirim ke mana pun; semuanya hanya ada di tab browser ini.</p>
+    </div>
+
+    <div class="inputs-grid">
+      <div class="input-card">
+        <label for="income">Penghasilan bulanan (bersih)</label>
+        <span class="input-readout mono" id="incomeOut">Rp3.000.000</span>
+        <input type="range" id="income" min="0" max="15000000" step="100000" value="3000000" aria-describedby="incomeOut">
+      </div>
+      <div class="input-card">
+        <label for="expenses">Pengeluaran pokok bulanan<br><small style="color:var(--parchment-dim);">sewa/cicilan, listrik & air, makan, transportasi, cicilan minimum</small></label>
+        <span class="input-readout mono" id="expensesOut">Rp2.500.000</span>
+        <input type="range" id="expenses" min="0" max="10000000" step="50000" value="2500000" aria-describedby="expensesOut">
+      </div>
+      <div class="input-card">
+        <label for="savings">Uang tunai yang bisa diambil hari ini<br><small style="color:var(--parchment-dim);">rekening, tabungan, uang cash</small></label>
+        <span class="input-readout mono" id="savingsOut">Rp500.000</span>
+        <input type="range" id="savings" min="0" max="20000000" step="50000" value="500000" aria-describedby="savingsOut">
+      </div>
+    </div>
+
+    <div class="runway-panel">
+      <div class="runway-top">
+        <div class="runway-days">Ketahananmu: <span class="mono" id="runwayDays">6</span> hari
+          <span class="runway-skull" id="runwaySkull" aria-hidden="true">☠️</span>
+          <span class="band mono" id="runwayBand">Rentan</span>
+        </div>
+      </div>
+      <div class="runway-track"><div class="runway-fill" id="runwayFill"></div></div>
+      <div class="runway-ticks"><span>0</span><span>7h</span><span>30h</span><span>60h</span><span>90h+</span></div>
+      <p style="margin-top:16px; margin-bottom:0; font-size:13.5px;" id="runwayNote"></p>
+    </div>
+  </section>
+
+  <!-- STRESS TEST -->
+  <section class="section" id="stress">
+    <p class="eyebrow">Langkah 2</p>
+    <div class="section-intro">
+      <h2>Uji jaringmu.</h2>
+      <p>Pilih satu guncangan, atau biarkan yang memilihmu. Kita bandingkan dengan uang tunai yang baru kamu masukkan — sebelum strategi apa pun di bawah ini ada.</p>
+    </div>
+
+    <div class="shock-grid" id="shockGrid"><!-- injected by JS --></div>
+
+    <div class="stress-controls">
+      <button class="btn btn-ghost btn-small" id="surpriseBtn">🎲 Kejutkan aku</button>
+      <span style="font-size:12.5px; color:var(--parchment-dim);" id="stressHint">Pilih kartu di atas untuk mengujinya.</span>
+    </div>
+
+    <div class="verdict" id="verdict">
+      <div class="verdict-title mono" id="verdictTitle"></div>
+      <div class="verdict-body" id="verdictBody"></div>
+    </div>
+  </section>
+
+  <!-- WEAVE YOUR NET -->
+  <section class="section" id="weave">
+    <p class="eyebrow">Langkah 3</p>
+    <div class="section-intro">
+      <h2>Tidak ada satu strategi pun yang harus menanggung semua beban.</h2>
+      <p>Rumah tangga yang tangguh biasanya membangun ketahanan dari beberapa pertahanan kecil dan berlapis, bukan satu dana darurat besar. Pilih yang benar-benar cocok dengan hidupmu — setiap pilihan menambah satu anyaman ke jaringmu.</p>
+    </div>
+
+    <div class="weave-layout">
+      <div class="net-stage">
+        <svg id="netSvg" viewBox="0 0 526 466" role="img" aria-label="Sebuah jaring yang terisi seiring kamu memilih strategi di bawah"></svg>
+        <div class="net-caption">
+          <span>anyaman tertenun</span>
+          <strong><span id="strandCount">0</span>/9</strong>
+        </div>
+      </div>
+
+      <div class="strategy-grid" id="strategyGrid"><!-- injected by JS --></div>
+    </div>
+  </section>
+
+  <!-- PLAN -->
+  <section class="section" id="plan">
+    <p class="eyebrow">Langkah 4</p>
+    <div class="section-intro">
+      <h2>Jaringmu, hari ini.</h2>
+      <p>Daftar periksa yang hidup, bukan produk jadi. Centang yang sudah kamu mulai, lalu salin rencananya ke tempat yang benar-benar akan kamu lihat lagi.</p>
+    </div>
+
+    <div class="plan-layout">
+      <div class="gauge-card">
+        <div class="gauge-wrap">
+          <svg viewBox="0 0 100 100">
+            <circle class="gauge-bg" cx="50" cy="50" r="42"></circle>
+            <circle class="gauge-fg" id="gaugeFg" cx="50" cy="50" r="42" stroke-dasharray="263.9" stroke-dashoffset="263.9"></circle>
+          </svg>
+          <div class="gauge-center">
+            <span class="gauge-num" id="gaugeNum">0</span>
+            <span class="gauge-lbl" id="gaugeLbl">Rentan</span>
+          </div>
+        </div>
+        <p class="gauge-foot"><span class="mono" id="gaugeRunway">6 hari</span> cadangan tunai, plus <span class="mono" id="gaugeStrands">0</span> anyaman perlindungan tambahan.</p>
+      </div>
+
+      <div class="plan-list" id="planList">
+        <div class="plan-empty">Belum ada yang teranyam. Pilih satu-dua strategi di atas — satu saja sudah mengubah bentuk jaringmu.</div>
+      </div>
+    </div>
+
+    <div class="plan-actions">
+      <button class="btn btn-primary" id="copyPlanBtn">Salin rencanaku</button>
+      <button class="btn btn-ghost" id="resetBtn">Mulai ulang</button>
+      <span class="copy-feedback mono" id="copyFeedback">Tersalin ✓</span>
+    </div>
+    <textarea class="copy-fallback mono" id="copyFallback" readonly aria-label="Rencanamu dalam bentuk teks"></textarea>
+
+    <div class="resources">
+      <h3>Ke mana harus mulai secara lokal</h3>
+      <div class="resource-grid">
+        <a class="resource-card" href="https://cekbansos.kemensos.go.id" target="_blank" rel="noopener">
+          <strong>Cekbansos.kemensos.go.id</strong><span>Cek status PKH, BPNT (Kartu Sembako), dan bantuan iuran BPJS Kesehatan pakai NIK.</span>
+        </a>
+        <a class="resource-card" href="https://ojk.go.id" target="_blank" rel="noopener">
+          <strong>Kontak OJK 157</strong><span>Telepon 157 atau WA 081-157-157-157 — cek legalitas pinjaman & koperasi, laporkan pinjol ilegal.</span>
+        </a>
+        <a class="resource-card" href="https://www.pegadaian.co.id" target="_blank" rel="noopener">
+          <strong>Pegadaian</strong><span>Gadai resmi milik negara untuk pinjaman cepat dan aman berjaminan barang.</span>
+        </a>
+        <a class="resource-card" href="https://kemensos.go.id/" target="_blank" rel="noopener">
+          <strong>Halaman Utama Kemensos</strong><span>Informasi resmi tentang program bantuan sosial ada di website ini.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="chatbot-fab" id="chatbotFab" role="button" tabindex="0" aria-expanded="false" aria-controls="chatbotPanel">
+  <span class="chatbot-fab-icon">💬</span>
+</div>
+
+<div class="chatbot-panel" id="chatbotPanel" aria-live="polite" aria-label="Chatbot Kifusuru">
+  <div class="chatbot-panel-header">
+    <div>
+      <strong>Asisten Kifusuru</strong>
+      <span>Gemini 3 Flash</span>
+    </div>
+    <button class="chatbot-close" id="chatbotCloseBtn" type="button" aria-label="Tutup chatbot">×</button>
+  </div>
+  <div class="chatbot-status" id="chatbotStatus">Siap. Saya siap membantu.</div>
+  <div class="chatbot-messages" id="chatbotMessages"></div>
+  <form class="chatbot-form" id="chatbotForm">
+    <input type="text" id="chatbotInput" placeholder="Ketik pertanyaanmu di sini..." autocomplete="off">
+    <button class="btn btn-primary btn-small" type="submit">Kirim</button>
+  </form>
+</div>
+
+<footer class="disclaimer">
+  <div class="about-us-wrap">
+    <a class="btn btn-ghost" href="./about.html">About Us</a>
+    <a class="btn btn-ghost" href="./source.html">Source</a>
+  </div>
+  <p>Kifusuru adalah alat edukasi untuk membantumu memikirkan pilihan — bukan nasihat keuangan, kredit, atau hukum, dan tidak menyimpan apa pun setelah tab ini ditutup. Untuk panduan khusus situasimu, hubungi Dinas Sosial setempat, koperasi/BMT terdekat, atau Kontak OJK 157 untuk memastikan legalitas produk keuangan.</p>
+</footer>
+
+<script src="./script.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js', { scope: './' })
+    .then(() => console.log('Service Worker Registered'))
+    .catch((error) => console.error('Service Worker Error:', error));
+}
+</script>
+</body>
+</html>

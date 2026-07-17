@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Source — Kenali Risikomu, Siapkan Perlindunganmu!!</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header class="hud">
+    <div class="hud-inner">
+      <a class="brand" href="./Main.html" aria-label="Kifusuru">
+        <img class="brand-icon" src="./icon.svg" alt="Ikon Kifusuru">
+        <img class="brand-wordmark" src="./com_name.svg" alt="Kifusuru">
+      </a>
+      <div class="hud-center-tag">Kenali Risikomu, Siapkan Perlindunganmu!!</div>
+      <div class="hud-score">
+        <div class="hud-text" style="align-items:flex-end;">
+          <span class="hud-number">Source</span>
+          <span class="hud-label">Kifusuru</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section hero about-page">
+      <div class="hero-copy">
+        <p class="eyebrow">Sumber & referensi</p>
+        <h1>Daftar sumber<br><em>yang dipakai dalam aplikasi.</em></h1>
+        <p class="lede">Halaman ini menampilkan referensi data, sumber informasi, serta tools yang digunakan untuk
+          membangun Kifusuru.</p>
+        <div class="hero-actions">
+          <a href="./Main.html" class="btn btn-primary">Home</a>
+          <a href="./about.html" class="btn btn-ghost">About Us</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="stat-card">
+          <span class="stat-text">Kifusuru menyusun konten dan fitur dengan mengacu pada sumber resmi, data publik, dan
+            alat bantu AI yang transparan.</span>
+          <span class="stat-source">referensi • data • teknologi</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section source-section">
+      <div class="section-intro">
+        <h2>Sumber-sumber</h2>
+      </div>
+      <ul class="source-list">
+        <li>Kompas.com (2025) – Krisis Tabungan di RI, 70 Persen Warga Indonesia Hidup Tanpa Dana Darurat (mengutip data
+          OJK & GoodStats 2024)</li>
+        <li>Portal Resmi Kemensos – Cek Bansos</li>
+        <li>Kompas TV (2026) – Cara Cek Bansos PKH-BPNT Juli 2026</li>
+        <li>Readers.id (2026) – Kemensos Permudah Cek Bansos PKH dan BPNT 2026</li>
+        <li>OJK – Infografis Pemberantasan Pinjol Ilegal</li>
+        <li>Portal Resmi OJK – Kontak 157</li>
+        <li>OJK – Jadwal Operasional Kontak 157</li>
+        <li>Pegadaian – Alternatif Pinjam Uang Tanpa Bunga di Pegadaian</li>
+        <li>Pegadaian – Syarat dan Jenis Pinjaman di Pegadaian</li>
+        <li>Tuwaga.id – Biaya Rawat Inap Tanpa BPJS</li>
+        <li>Roojai.co.id – Biaya Rawat Inap Rumah Sakit</li>
+        <li>Bisnis.com – Daftar UMP 2026 Tertinggi dan Terendah di Indonesia</li>
+        <li>Pajakku.com – Daftar UMP 2026 Terlengkap di 38 Provinsi</li>
+      </ul>
+    </section>
+
+    <section class="section source-section">
+      <div class="section-intro">
+        <h2>AI ASSISTANT & API</h2>
+      </div>
+      <ul class="source-list">
+        <li>Claude Sonnet 5 – primary development and architecture</li>
+        <li>Google Gemini API (model gemini 3 flash) – AI features and intelligent assistance integrated via API key to
+          make a chatbot</li>
+        <li>GitHub Copilot – code completion and productivity</li>
+        <li>Vercel – deployment and hosting</li>
+        <li>HTML5, CSS3, Vanilla JavaScript</li>
+        <li>Git for version control</li>
+        <li>ChatGPT – image generation, idea sampling</li>
+      </ul>
+    </section>
+  </main>
+
+  <div class="chatbot-fab" id="chatbotFab" role="button" tabindex="0" aria-expanded="false"
+    aria-controls="chatbotPanel">
+    <span class="chatbot-fab-icon">💬</span>
+  </div>
+
+  <div class="chatbot-panel" id="chatbotPanel" aria-live="polite" aria-label="Chatbot Kifusuru">
+    <div class="chatbot-panel-header">
+      <div>
+        <strong>Asisten Kifusuru</strong>
+        <span>Gemini 3 Flash</span>
+      </div>
+      <button class="chatbot-close" id="chatbotCloseBtn" type="button" aria-label="Tutup chatbot">×</button>
+    </div>
+    <div class="chatbot-status" id="chatbotStatus">Siap. Saya siap membantu.</div>
+    <div class="chatbot-messages" id="chatbotMessages"></div>
+    <form class="chatbot-form" id="chatbotForm">
+      <input type="text" id="chatbotInput" placeholder="Ketik pertanyaanmu di sini..." autocomplete="off">
+      <button class="btn btn-primary btn-small" type="submit">Kirim</button>
+    </form>
+  </div>
+
+  <footer class="disclaimer">
+    <div class="about-us-wrap">
+      <a class="btn btn-ghost" href="./Main.html">Home</a>
+    </div>
+    <p>Kifusuru adalah alat edukasi untuk membantumu memikirkan pilihan — bukan nasihat keuangan, kredit, atau hukum,
+      dan tidak menyimpan apa pun setelah tab ini ditutup. Untuk panduan khusus situasimu, hubungi Dinas Sosial
+      setempat, koperasi/BMT terdekat, atau Kontak OJK 157 untuk memastikan legalitas produk keuangan.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

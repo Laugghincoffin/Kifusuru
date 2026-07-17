@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Kenali Risikomu, Siapkan Perlindunganmu!!</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="hud">
+    <div class="hud-inner">
+      <a class="brand" href="./Main.html" aria-label="Kifusuru">
+        <img class="brand-icon" src="./icon.svg" alt="Ikon Kifusuru">
+        <img class="brand-wordmark" src="./com_name.svg" alt="Kifusuru">
+      </a>
+      <div class="hud-center-tag">Kenali Risikomu, Siapkan Perlindunganmu!!</div>
+      <div class="hud-score">
+        <div class="hud-text" style="align-items:flex-end;">
+          <span class="hud-number">About Us</span>
+          <span class="hud-label">Kifusuru</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section hero about-page">
+      <div class="hero-copy">
+        <p class="eyebrow">Tentang Kifusuru</p>
+        <h1>Kenali risikomu,<br><em>siapkan perlindunganmu.</em></h1>
+        <p class="lede">Kifusuru adalah platform edukasi keuangan yang membantu pengguna memahami seberapa siap kondisi keuangan mereka saat ini dalam menghadapi pengeluaran darurat yang tidak terduga.</p>
+        <div class="hero-actions">
+          <a href="./Main.html" class="btn btn-primary">Home</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="stat-card">
+          <img class="about-icon-large" src="./icon.svg" alt="Ikon Kifusuru">
+          <span class="stat-text">Kifusuru hadir untuk membantu pengguna mengukur ketahanan keuangan, memahami risiko, dan membangun jaring pengaman finansial secara bertahap.</span>
+          <span class="stat-source">edukasi • kesiapan • perlindungan</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-intro">
+        <h2>Apa Fungsi Kifusuru?</h2>
+        <p>Kifusuru membantu pengguna mengukur tingkat ketahanan keuangan saat ini, mengetahui risiko yang mungkin muncul saat krisis finansial, memahami seberapa lama mereka dapat bertahan, serta mengenal berbagai strategi perlindungan yang realistis dan dapat diterapkan.</p>
+      </div>
+
+      <div class="inputs-grid">
+        <div class="input-card">
+          <h3 style="margin-bottom:8px;">Analisis Ketahanan</h3>
+          <p>Pengguna memasukkan penghasilan, pengeluaran, dan uang tunai untuk melihat perkiraan ketahanan finansial mereka.</p>
+        </div>
+        <div class="input-card">
+          <h3 style="margin-bottom:8px;">Simulasi Risiko</h3>
+          <p>Berbagai skenario darurat dapat diuji untuk melihat dampak finansial yang mungkin terjadi.</p>
+        </div>
+        <div class="input-card">
+          <h3 style="margin-bottom:8px;">Strategi Perlindungan</h3>
+          <p>Alternatif perlindungan seperti tabungan otomatis, bantuan sosial, koperasi, pegadaian, dan lain-lain tersedia sebagai bagian dari jaring pengaman.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-intro">
+        <h2>Disclaimer</h2>
+        <p>Kifusuru adalah alat edukasi mandiri yang dirancang untuk membantu pengguna memahami kondisi keuangan serta mengeksplorasi berbagai pilihan perlindungan finansial. Hasil analisis dan rekomendasi tidak dapat dianggap sebagai nasihat keuangan profesional, nasihat investasi, atau nasihat hukum.</p>
+      </div>
+    </section>
+
+    <section class="section creators-section">
+      <div class="creators-intro">
+        <div class="section-intro">
+          <h2>The Creators</h2>
+          <p>Di buat oleh tim Horizon In Void</p>
+        </div>
+        <img class="creator-logo" src="./HIV_logo.svg" alt="Logo Horizon In Void">
+      </div>
+
+      <div class="creator-grid">
+        <div class="creator-card">
+          <img class="creator-photo" src="./Johan.svg" alt="Foto Johan">
+          <h4>Johanes Padmo T.S</h4>
+          <p>(Johan)</p>
+        </div>
+        <div class="creator-card">
+          <img class="creator-photo" src="./Jojo.svg" alt="Foto Jojo">
+          <h4>Louis Jonathan U.S</h4>
+          <p>(Jojo)</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="chatbot-fab" id="chatbotFab" role="button" tabindex="0" aria-expanded="false" aria-controls="chatbotPanel">
+    <span class="chatbot-fab-icon">💬</span>
+  </div>
+
+  <div class="chatbot-panel" id="chatbotPanel" aria-live="polite" aria-label="Chatbot Kifusuru">
+    <div class="chatbot-panel-header">
+      <div>
+        <strong>Asisten Kifusuru</strong>
+        <span>Gemini 3 Flash</span>
+      </div>
+      <button class="chatbot-close" id="chatbotCloseBtn" type="button" aria-label="Tutup chatbot">×</button>
+    </div>
+    <div class="chatbot-status" id="chatbotStatus">Siap. Saya siap membantu.</div>
+    <div class="chatbot-messages" id="chatbotMessages"></div>
+    <form class="chatbot-form" id="chatbotForm">
+      <input type="text" id="chatbotInput" placeholder="Ketik pertanyaanmu di sini..." autocomplete="off">
+      <button class="btn btn-primary btn-small" type="submit">Kirim</button>
+    </form>
+  </div>
+
+  <footer class="disclaimer">
+    <div class="about-us-wrap">
+      <a class="btn btn-ghost" href="./Main.html">Home</a>
+    </div>
+    <p>Kifu Suru adalah alat edukasi untuk membantumu memikirkan pilihan — bukan nasihat keuangan, kredit, atau hukum, dan tidak menyimpan apa pun setelah tab ini ditutup. Untuk panduan khusus situasimu, hubungi Dinas Sosial setempat, koperasi/BMT terdekat, atau Kontak OJK 157 untuk memastikan legalitas produk keuangan.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
