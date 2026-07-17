@@ -3,7 +3,7 @@
 
   /* ============ CHAT BOT ============ */
   var chatBotState = {
-    apiKey: 'AQ.Ab8RN6IjHUL8HyEZINYaZRmJh0YjqP4vj3aM2RRw3RWfin1wiw',
+    apiKey: 'API-HERE',
     connected: true,
     open: true
   };
